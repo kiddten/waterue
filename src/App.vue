@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div v-for="(item, index) in counter" :key="index">
-      <WSelect v-model="counter[index]"/>
-    </div>
+    <WCounter :wvalue="counter"/>
     <h3> {{ counter.join('') }}</h3>
     <button @click="send">send</button>
   </div>
@@ -10,19 +8,24 @@
 
 <script>
 
-import WSelect from "@/components/WSelect.vue";
+import WCounter from "@/components/WCounter.vue";
 
 export default {
   name: 'app',
-  components: {WSelect},
+  components: {WCounter},
   data() {
     return {
-    counter: Array(6).fill(7),
+    counter: Array(6).fill(5),
     }
   },
   methods: {
     send() {
-      alert(this.counter.join(''))
+      const num = Number(this.counter.join(''))
+      const date = new Date().toJSON()
+      alert(date)
+    },
+    oninput(val) {
+      alert(val)
     }
   }
 }
