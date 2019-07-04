@@ -6,3 +6,5 @@
 - [x] choose db (stitch?)
 - [ ] show data from db on separate page
 - [ ] add http://stylus-lang.com/ for styling 
+- [x] add archive component
+- [ ] add vuex

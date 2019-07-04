@@ -28,13 +28,10 @@ export default {
   },
   methods: {
     async send() {
-      const meter = Number(this.counter.join(''))
+      const meter = this.counter.join('')
       const date = new Date().toJSON()
-      await items.insertOne({date, meter})
-      alert('sent!')
-    },
-    oninput(val) {
-      alert(val)
+      const payload = {date, meter}
+      this.$store.dispatch('addRecord', payload)
     },
     async get_data() {
       const x = await items.find().toArray()

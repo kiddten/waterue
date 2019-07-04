@@ -16,11 +16,15 @@ export default {
   name: "WArchive",
   data() {
     return {
-      meter_data: [],
     }
   },
-  async mounted() {
-    this.meter_data = await this.meter_values()
+  computed: {
+    meter_data() {
+      return this.$store.state.records
+    }
+  },
+  created() {
+    this.$store.dispatch('fetchRecords')       
   },
   methods: {
     async meter_values() {

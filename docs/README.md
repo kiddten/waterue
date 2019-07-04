@@ -7,3 +7,10 @@
 ### Stitch
 * https://docs.mongodb.com/stitch/tutorials/guides/todo-guide-1/
 * https://github.com/mongodb-university/stitch-tutorial-todo-web
+
+
+### Vuex
+* https://stackoverflow.com/questions/41609155/vuex-rendering-data-that-is-fetched-from-rest-api
+* https://gist.github.com/cmdlhz/64a3e297eb1a6e588b2bd431f348e61b
+* https://github.com/vuejs/vuex/tree/dev/examples/shopping-cart
+* https://coursetro.com/posts/code/144/A-Vuex-Tutorial-by-Example---Learn-Vue-State-Management
