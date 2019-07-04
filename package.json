@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "dotenv": "^8.0.0",
     "mongodb-stitch-browser-sdk": "^4.4.1",
     "vue": "^2.6.10"
   },
