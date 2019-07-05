@@ -26,7 +26,7 @@ export default {
   'components': { WCounter, WArchive },
   data () {
     return {
-      'counter': new Array(6).fill(5),
+      'counter': new Array(6).fill(1),
     }
   },
   async created () {

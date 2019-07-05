@@ -1,11 +1,14 @@
 <template>
   <div class="wcounter">
-    <div
-      v-for="(item, index) in wvalue"
+    <WSelect
+      v-for="(item, index) in wvalue.slice(0, -1)"
       :key="index"
-    >
-      <WSelect v-model="wvalue[index]" />
-    </div>
+      v-model="wvalue[index]"
+    />
+    <WSelect
+      v-model="wvalue[wvalue.length - 1]"
+      class="red"
+    />
   </div>
 </template>
 
@@ -21,7 +24,14 @@ export default {
 </script>
 
 <style>
+
 .wcounter {
-    display: flex
+    width: 360px;
+    height: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 30px;
 }
+
 </style>
