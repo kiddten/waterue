@@ -26,7 +26,6 @@ export default {
     },
   },
   created () {
-    this.$store.dispatch('fetchRecords')
   },
   'methods': {
     async meter_values () {

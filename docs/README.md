@@ -19,3 +19,10 @@
 * .eslintrc.js
 * https://eslint.org/docs/user-guide/configuring
 * https://guides.hexlet.io/vscode-js-setup/
+
+### Two-way data binding
+* Take care about computed properties related to vuex store
+* https://github.com/vuejs/vuex/issues/1085
+* https://forum.vuejs.org/t/computed-properties-in-data/11231/7
+* https://vuejs.org/v2/guide/list.html#Array-Change-Detection
+* https://jsfiddle.net/Herteby/qt0aqa9g/
