@@ -19,11 +19,11 @@ export default new Vuex.Store({
   },
   'getters': {
     'last': (state) => {
-      console.log('trigged')
-      if (state.records.length > 0) {
-        return [...state.records[state.records.length - 1].meter]
+      const length = state.records.length
+      if (length > 0) {
+        return state.records[length - 1].meter.toString().padStart(6, '0')
       }
-      return [...'000000']
+      return '000000'
     },
   },
   'actions': {

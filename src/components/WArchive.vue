@@ -5,7 +5,7 @@
       v-for="item in meter_data"
       :key="item.date"
     >
-      {{ item.date }} : {{ item.meter }}
+      {{ item.date }} : {{ item.meter.toString().padStart(6, '0') }} (+{{ item.delta }})
     </div>
     <hr>
   </div>

@@ -41,13 +41,18 @@ export default {
   async created () {
     await loginAnonymous()
     await this.$store.dispatch('fetchRecords')
-    this.local_last_value = this.last_value
+    this.local_last_value = [...this.last_value]
   },
   'methods': {
     async send () {
-      const meter = this.local_last_value.join('')
+      const meter = Number(this.local_last_value.join(''))
+      if (meter < this.last_value) {
+        alert('Current value can\'t be lower than last one')
+        return
+      }
       const date = new Date().toJSON()
-      const payload = { date, meter }
+      const delta = meter - this.last_value
+      const payload = { date, meter, delta }
       this.$store.dispatch('addRecord', payload)
     },
     async get_data () {
