@@ -1,17 +1,22 @@
 <template>
   <div>
-    <select v-bind:value="value" @input="$emit('input', $event.target.value)"  selected="index==value">
-      <option v-for="(val, index) in 10" v-bind:key="val">
-        {{ index }}
-      </option>
-    </select>
+    <el-select
+      :value="value"
+      @change="$emit('input', $event)"
+    >
+      <el-option
+        v-for="(val, index) in 10"
+        :key="val"
+        :value="index"
+      />
+    </el-select>
   </div>
 </template>
 
 <script>
 export default {
-    name: "WSelect",
-    props: ['value']
+  'name': 'WSelect',
+  'props': ['value'],
 }
 </script>
 

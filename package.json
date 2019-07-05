@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "dotenv": "^8.0.0",
+    "element-ui": "^2.10.1",
     "mongodb-stitch-browser-sdk": "^4.4.1",
     "vue": "^2.6.10",
     "vuex": "^3.1.1"
@@ -18,9 +19,23 @@
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-plugin-eslint": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
+    "@wemake-services/eslint-config-javascript": "^0.2.4",
+    "@wemake-services/eslint-config-jsdoc": "^0.2.3",
+    "@wemake-services/eslint-config-vue": "^0.1.4",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-standart": "^0.2.0",
+    "eslint-plugin-compat": "^3.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsdoc": "^10.2.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.4.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-unicorn": "^9.1.1",
+    "eslint-plugin-vue": "^5.2.3",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {

@@ -14,3 +14,8 @@
 * https://gist.github.com/cmdlhz/64a3e297eb1a6e588b2bd431f348e61b
 * https://github.com/vuejs/vuex/tree/dev/examples/shopping-cart
 * https://coursetro.com/posts/code/144/A-Vuex-Tutorial-by-Example---Learn-Vue-State-Management
+
+### Linters
+* .eslintrc.js
+* https://eslint.org/docs/user-guide/configuring
+* https://guides.hexlet.io/vscode-js-setup/
