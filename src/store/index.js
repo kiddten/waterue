@@ -14,21 +14,21 @@ export default new Vuex.Store({
       state.records = records
     },
     addRecord (state, record) {
-      if (state.records) { state.records.push(record) }
+      if (state.records) { state.records.unshift(record) }
     },
   },
   'getters': {
     'last': (state) => {
       const length = state.records.length
       if (length > 0) {
-        return state.records[length - 1].meter.toString().padStart(6, '0')
+        return state.records[0].meter.toString().padStart(6, '0')
       }
       return '000000'
     },
   },
   'actions': {
     async fetchRecords ({ commit }) {
-      const records = await items.find().toArray()
+      const records = await items.find({}, { 'sort': { 'date': -1 } }).toArray()
       commit('saveRecords', records)
       return records
     },

@@ -7,6 +7,8 @@
 ### Stitch
 * https://docs.mongodb.com/stitch/tutorials/guides/todo-guide-1/
 * https://github.com/mongodb-university/stitch-tutorial-todo-web
+* https://docs.mongodb.com/stitch/getting-started/configure-rules-based-access-to-mongodb/
+* https://stackoverflow.com/questions/4421207/how-to-get-the-last-n-records-in-mongodb
 
 
 ### Vuex
@@ -26,3 +28,7 @@
 * https://forum.vuejs.org/t/computed-properties-in-data/11231/7
 * https://vuejs.org/v2/guide/list.html#Array-Change-Detection
 * https://jsfiddle.net/Herteby/qt0aqa9g/
+
+
+### JS
+* https://stackoverflow.com/questions/8073673/how-can-i-add-new-array-elements-at-the-beginning-of-an-array-in-javascript
