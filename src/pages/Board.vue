@@ -20,7 +20,7 @@ import { mapGetters } from 'vuex'
 
 import WCounter from '@/components/WCounter.vue'
 import WArchive from '@/components/WArchive.vue'
-import { loginAnonymous, items } from '@/stitch'
+import { items } from '@/stitch'
 
 export default {
   'name': 'Board',
@@ -39,7 +39,6 @@ export default {
     }),
   },
   async created () {
-    await loginAnonymous()
     await this.$store.dispatch('fetchRecords')
     this.local_last_value = [...this.last_value]
   },

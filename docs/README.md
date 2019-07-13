@@ -10,6 +10,12 @@
 * https://docs.mongodb.com/stitch/getting-started/configure-rules-based-access-to-mongodb/
 * https://stackoverflow.com/questions/4421207/how-to-get-the-last-n-records-in-mongodb
 
+### Stitch auth
+* https://docs.mongodb.com/stitch/authentication/userpass/
+* https://cloud.mongodb.com
+* https://stitch.mongodb.com/
+* https://github.com/nlarew/ChatApp
+* https://github.com/nlarew/ChatApp/blob/89bbb868070158b07d846729714cb2f7481f1f45/src/stitch-final.js
 
 ### Vuex
 * https://stackoverflow.com/questions/41609155/vuex-rendering-data-that-is-fetched-from-rest-api

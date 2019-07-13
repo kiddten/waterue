@@ -12,5 +12,5 @@
 - [x] validate input (don't allow to add value below last val)
 - [x] add router
 - [ ] add protected urls
-- [ ] add stitch email auth
-- [ ] add login page
+- [x] add stitch email auth
+- [x] add login page

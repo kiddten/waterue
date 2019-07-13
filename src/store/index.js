@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import { items } from '@/stitch'
+import { items, app } from '@/stitch'
 
 Vue.use(Vuex)
 
@@ -33,6 +33,8 @@ export default new Vuex.Store({
       return records
     },
     async addRecord ({ commit }, data) {
+      // TODO move it to CRUD
+      data.owner_id = app.auth.currentUser.id
       await items.insertOne(data)
       commit('addRecord', data)
       return data
