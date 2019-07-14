@@ -38,3 +38,9 @@
 
 ### JS
 * https://stackoverflow.com/questions/8073673/how-can-i-add-new-array-elements-at-the-beginning-of-an-array-in-javascript
+
+### Router
+* https://stackoverflow.com/questions/35664550/vue-js-redirection-to-another-page
+
+### VS code
+* https://code.visualstudio.com/docs/languages/jsconfig
