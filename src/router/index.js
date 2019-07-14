@@ -3,19 +3,22 @@ import Router from 'vue-router'
 import Board from '@/pages/Board.vue'
 import Login from '@/pages/Login.vue'
 import ConfirmEmail from '@/pages/ConfirmEmail.vue'
+import store from '@/store'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   'routes': [
     {
       'path': '/',
       'redirect': '/board',
+      'meta': { 'requiredAuth': true },
     },
     {
       'path': '/board',
       'name': 'board',
       'component': Board,
+      'meta': { 'requiredAuth': true },
     },
     {
       'path': '/login',
@@ -29,3 +32,17 @@ export default new Router({
     },
   ],
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiredAuth)) {
+    if (store.getters.isAuthenticated) {
+      next()
+      return
+    }
+    next('/login')
+  } else {
+    next()
+  }
+})
+
+export default router

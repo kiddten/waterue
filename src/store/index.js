@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import { items, app } from '@/stitch'
+import { items, app, hasLoggedInUser } from '@/stitch'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   'state': {
     'records': [],
+    'authenticated': hasLoggedInUser(),
   },
   'mutations': {
     saveRecords (state, records) {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     addRecord (state, record) {
       if (state.records) { state.records.unshift(record) }
+    },
+    login (state) {
+      state.authenticated = hasLoggedInUser()
     },
   },
   'getters': {
@@ -24,6 +28,9 @@ export default new Vuex.Store({
         return state.records[0].meter.toString().padStart(6, '0')
       }
       return '000000'
+    },
+    'isAuthenticated': (state) => {
+      return state.authenticated
     },
   },
   'actions': {
@@ -38,6 +45,9 @@ export default new Vuex.Store({
       await items.insertOne(data)
       commit('addRecord', data)
       return data
+    },
+    login ({ commit }) {
+      commit('login')
     },
   },
 })

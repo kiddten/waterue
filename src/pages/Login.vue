@@ -32,7 +32,10 @@ export default {
       await registerEmailPasswordUser(this.email, this.password)
     },
     async login () {
+      // TODO move to separate function
       await loginEmailPassword(this.email, this.password)
+      this.$store.dispatch('login')
+      this.$router.push('/board')
     },
   },
 }

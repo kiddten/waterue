@@ -37,3 +37,7 @@ export async function loginEmailPassword (email, password) {
   const credential = new UserPasswordCredential(email, password)
   return await app.auth.loginWithCredential(credential)
 }
+
+export function hasLoggedInUser () {
+  return app.auth.isLoggedIn
+}

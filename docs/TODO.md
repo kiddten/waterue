@@ -11,6 +11,8 @@
 - [x] load input according to last value in db/store
 - [x] validate input (don't allow to add value below last val)
 - [x] add router
-- [ ] add protected urls
+- [x] add protected urls
 - [x] add stitch email auth
 - [x] add login page
+- [ ] add logout
+
