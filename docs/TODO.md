@@ -16,5 +16,5 @@
 - [x] add login page
 - [x] add logout
 - [x] add email confirmation redirect
-- [ ] proper styling for login component
+- [x] proper styling for login component
 
