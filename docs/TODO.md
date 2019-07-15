@@ -14,5 +14,7 @@
 - [x] add protected urls
 - [x] add stitch email auth
 - [x] add login page
-- [ ] add logout
+- [x] add logout
+- [x] add email confirmation redirect
+- [ ] proper styling for login component
 
