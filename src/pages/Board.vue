@@ -11,6 +11,9 @@
     <el-button @click="clear">
       clear
     </el-button>
+    <el-button @click="logoutUser">
+      logout
+    </el-button>
     <WArchive />
   </div>
 </template>
@@ -20,7 +23,7 @@ import { mapGetters } from 'vuex'
 
 import WCounter from '@/components/WCounter.vue'
 import WArchive from '@/components/WArchive.vue'
-import { items } from '@/stitch'
+import { items, logout } from '@/stitch'
 
 export default {
   'name': 'Board',
@@ -61,6 +64,11 @@ export default {
     async clear () {
       await items.deleteMany()
       alert('Clean done!')
+    },
+    async logoutUser () {
+      await logout()
+      this.$store.dispatch('logout')
+      this.$router.push('/login')
     },
   },
 }

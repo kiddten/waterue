@@ -6,6 +6,7 @@ import {
   confirmEmailPasswordUser,
   loginEmailPassword,
   hasLoggedInUser,
+  logout,
 } from './auth'
 
 export { app, items }
@@ -15,4 +16,5 @@ export {
   confirmEmailPasswordUser,
   loginEmailPassword,
   hasLoggedInUser,
+  logout,
 }

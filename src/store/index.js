@@ -20,6 +20,9 @@ export default new Vuex.Store({
     login (state) {
       state.authenticated = hasLoggedInUser()
     },
+    logout (state) {
+      state.authenticated = hasLoggedInUser()
+    },
   },
   'getters': {
     'last': (state) => {
@@ -48,6 +51,9 @@ export default new Vuex.Store({
     },
     login ({ commit }) {
       commit('login')
+    },
+    logout ({ commit }) {
+      commit('logout')
     },
   },
 })

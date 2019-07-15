@@ -41,3 +41,9 @@ export async function loginEmailPassword (email, password) {
 export function hasLoggedInUser () {
   return app.auth.isLoggedIn
 }
+
+export async function logout () {
+  if (hasLoggedInUser()) {
+    await app.auth.logoutUserWithId(app.auth.user.id)
+  }
+}
