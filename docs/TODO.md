@@ -17,4 +17,5 @@
 - [x] add logout
 - [x] add email confirmation redirect
 - [x] proper styling for login component
+- [ ] add green button to send
 
