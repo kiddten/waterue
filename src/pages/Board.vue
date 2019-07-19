@@ -5,9 +5,6 @@
     <el-button @click="send">
       send
     </el-button>
-    <el-button @click="get_data">
-      get_data
-    </el-button>
     <el-button @click="clear">
       clear
     </el-button>
@@ -24,6 +21,7 @@ import { mapGetters } from 'vuex'
 import WCounter from '@/components/WCounter.vue'
 import WArchive from '@/components/WArchive.vue'
 import { items, logout } from '@/stitch'
+import { counterLength } from '@/store'
 
 export default {
   'name': 'Board',
@@ -33,7 +31,7 @@ export default {
       // We need this due to we can not mutate
       //  computed prop which comes from vuex)
       // https://github.com/vuejs/vuex/issues/1085
-      'local_last_value': [...'000000'],
+      'local_last_value': [...'0'.repeat(counterLength)],
     }
   },
   'computed': {
@@ -56,10 +54,6 @@ export default {
       const delta = meter - this.last_value
       const payload = { date, meter, delta }
       this.$store.dispatch('addRecord', payload)
-    },
-    async get_data () {
-      const x = await items.find().toArray()
-      console.log(x)
     },
     async clear () {
       await items.deleteMany()

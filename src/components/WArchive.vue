@@ -5,7 +5,7 @@
       v-for="item in meter_data"
       :key="item.date"
     >
-      {{ item.date }} : {{ item.meter.toString().padStart(6, '0') }} (+{{ item.delta }})
+      {{ item.date }} : {{ item.meter.toString().padStart(counterLength, '0') }} (+{{ item.delta }})
     </div>
     <hr>
   </div>
@@ -13,11 +13,13 @@
 
 <script>
 import { items } from '@/stitch'
+import { counterLength } from '@/store'
 
 export default {
   'name': 'WArchive',
   data () {
     return {
+      counterLength,
     }
   },
   'computed': {

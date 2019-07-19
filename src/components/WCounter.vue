@@ -1,12 +1,14 @@
 <template>
   <div class="wcounter">
     <WSelect
-      v-for="(item, index) in wvalue.slice(0, -1)"
+      v-for="(item, index) in wvalue.slice(0, -3)"
       :key="index"
       v-model="wvalue[index]"
     />
     <WSelect
-      v-model="wvalue[wvalue.length - 1]"
+      v-for="(item, index) in wvalue.slice(-3)"
+      :key="wvalue.length -1 - index"
+      v-model="wvalue[wvalue.length -1 - index]"
       class="red"
     />
   </div>

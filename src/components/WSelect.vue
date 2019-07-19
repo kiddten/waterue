@@ -1,7 +1,6 @@
 <template>
   <div class="wselect">
     <el-select
-      size="small"
       :value="value"
       @change="$emit('input', $event)"
     >
@@ -26,6 +25,7 @@ export default {
 .wselect {
   flex-grow: 1;
   flex-basis: 0;
+  font-weight: bold;
 }
 
 .el-input__suffix {
@@ -38,6 +38,7 @@ input.el-input__inner {
 
 .el-input--suffix > input.el-input__inner {
   padding: 0;
+  font-weight: bold;
 }
 
 .el-select-dropdown__wrap {

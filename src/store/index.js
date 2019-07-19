@@ -5,6 +5,9 @@ import { items, app, hasLoggedInUser } from '@/stitch'
 
 Vue.use(Vuex)
 
+const counterLength = 8
+export { counterLength }
+
 export default new Vuex.Store({
   'state': {
     'records': [],
@@ -28,9 +31,9 @@ export default new Vuex.Store({
     'last': (state) => {
       const length = state.records.length
       if (length > 0) {
-        return state.records[0].meter.toString().padStart(6, '0')
+        return state.records[0].meter.toString().padStart(counterLength, '0')
       }
-      return '000000'
+      return '0'.repeat(counterLength)
     },
     'isAuthenticated': (state) => {
       return state.authenticated
