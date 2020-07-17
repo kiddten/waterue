@@ -11,7 +11,7 @@
     "core-js": "^2.6.5",
     "dotenv": "^8.0.0",
     "element-ui": "^2.10.1",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.19",
     "lodash.defaultsdeep": "^4.6.1",
     "mongodb-stitch-browser-sdk": "^4.4.1",
     "vue": "^2.6.10",
